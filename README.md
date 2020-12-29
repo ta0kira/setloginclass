@@ -7,7 +7,7 @@ administrator to:
   new process executed under the respective login class.
 
 - Set up aggregate resource limits for the collection of *all* processes running
-  under a process group using `rctl`.
+  under a login class using `rctl`.
 
 Unfortunately, FreeBSD does not include a simple way to set the login class from
 a script or the command line.
@@ -29,7 +29,7 @@ make && make install
 ```
 
 This will create `/usr/sbin/setloginclass`. Note that this *isn't* installed in
-`/usr/local/sbin` to allow you to modify `/usr/rc.subr` to properly set the
+`/usr/local/sbin` to allow you to modify `/etc/rc.subr` to properly set the
 login class for daemons started prior to mounting `/usr/local`.
 
 # Using
